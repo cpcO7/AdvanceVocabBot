@@ -1,0 +1,188 @@
+Unit_1
+Detriment-zarar-disadvantage
+Dexterous-mohir, usta-skilled
+Discretion-ehtiyotkorlik-good sense
+Facetious-beo'xshov hazil-funny
+Gregarious-kirishimli-outgoing
+Optimum-iloji bo'lgan eng zo'ri-ideal
+Ostentatious-o'zini ko'rsatish-showy
+Scrupulous-halol-ethical
+Sensory-sezgi a'zolariga bog'liq-of the sense
+Vicarious-nimadirni o'rniga boshqa narsani his qilsa bo'ladigan-indirect
+Unit_2
+Collaborate-(on) birgalikda ishlamoq-to team up
+Despondent-umidsiz/ tushkunlikka tushmoq-depressed
+Instigate-nimadirni boshlanishiga sabab bo'lmoq-to cause
+Resilient-tez moslashuvchan-quick to recover
+retrospect-o'tmishga nazar solsak-looking back
+Rudimentary-boshlang'ich-basic
+Scoff-(at) masxara qilmoq-to ridicule
+Squelch-barham bermoq/ pilchillatmoq-to hold back
+Venerate-hurmat qilmoq-to honor
+Zealot-muttasiblik tafardori-extremists
+Unit_3
+Ambiguous-tushunarsiz: unclear
+Dissident-davlatdan norozi-rebel
+Embellish-bezatmoq-decorate
+Fritter (away)-bekorga sarflamoq-to waste
+Inadvertent-bexosdan-not intended
+Inane-ahmoqona-silly
+Juxtapose-qiyoslash uchun yonma-yon qo'ymoq-to put side by side
+Lethargy-lanjlik-inactivity
+Sporadic-onda sonda-irregular
+Subsidize-pul bn taminlamoq-to pay for
+Unit_4
+Berate-dakki bermoq-to scold angrily
+Estrange-aloqalarni uzish-to drive away
+Euphoric-juda hursand-very happy
+Impetuous-shoshqaloq-impulsive
+Infallible-hech qachon xato qilmidigan-perfect
+Maudlin-ta'sirchan overly emotional
+Regress-yomonroq xolatga qaytmoq-to go backward
+Relinquish-qo'ldan boy bermoq-to yield
+Ubiquitous-hamma joyda ko'zga ko'rinadigan-found everywhere
+Zenith-eng gullagan davr-the highest point
+Unit_5
+Charlatan-o'zini biladigan qilib ko'rsatish-a con artist;
+Corroborate-tasdiqlamoq-to confirm;
+Disseminate-yoymoq/ ulashmoq-to spread;
+Diverge-turli tomonga yo'nalgan-to go in different directions;
+Dormant-nofaol-not active;
+Hoist-ko'tarmoq( arqon va uskuna orqali)-to raise
+Illicit-noqonuniy-unlawful
+Irrevocable-o'zgartirib bo'lmaydigan-not reversible
+Precipitate-tezlatmoq-to bring on
+Proliferation-tez o'sish/ ko'payish-a rapid increase
+Unit_7
+Equivocate-gapni aylantirish-to be unclear
+Fortuitous-tasodifiy/ kutilmagan-accidental
+Impeccable-bexato-flawless
+Liaison-hamkorlik-link
+Predisposed-moyil bo'lish-likely
+Propensity-mayl/ odat-readiness
+Reprehensible-axloq qoidalariga tog'ri kelmaydigan-shameful
+Sham-uydurma-something false
+Solace-tasalli-relief
+Solicitous-g'amxo'r/ mexribon-attentive
+Unit_8
+Attrition-ischilar/ odamlar sonini kamaytirish-a natural loss of individuals
+Circumvent-aylanib o'tmoq/ qutulmoq-to avoid
+Cohesive-hamjihat/ birlashgan-connected
+Grievous-musibatli-terrible
+Inundate-o'ta ko'p jo'natmoq/ kelmoq-to flood
+Oblivious-bexabar-not noticing
+Reticent-kamgap-quiet
+Robust-baquvvat-strong and well
+Sanction-sanksiya/ cheklov-to grant approval of
+Vociferous-baralla/ jar solish-loud
+Unit_9
+Bolster-qo'llab quvvatlamoq-to support
+Depreciate-qadrsizlamoq-to become less valuable
+Indiscriminate-o'ylamay qilingan-not selective
+Inquisitive-surishtiraveradigan-questioning
+Nebulous-xira-indefinite
+Relegate-pastga tushurmoq/ past lavozim berish-to send
+Replete-yaxshi ta'minlangan-filled
+Sedentary-kam harakat-involving much sitting
+Tenet-asoslanadigan nazariya-a principle
+Terse-qisqa va qo'pol-short
+Unit_10
+Autonomy-o'zini o'zi boshqarish/ avtonom-freedom from control
+Bureaucratic-hujjatbozlikka oid-over regulated
+Mandate-boshqarish huquqi/ vokolat-an authorization
+Ostracize-yakkalamoq/ guruhga qo'shmaslik-to reject
+Raucous-xirillagan( for sound) disorderly
+Recourse-yordam so'rab murojat qilish-a way to get help
+Reiterate-qaytarmoq-to repeat
+Tantamount-teng bo'lish-just like
+Tenacious-qaytmas/ ushlagan joyini qo'yvormaydigan-grasping strongly
+Utopia-hamma narsa bekamu-ko'st bo'lgan hayoliy joy-a paradise
+Unit_11
+Clandestine-maxfiy/ yashirin-concealed
+Contingency-ehtimollik/ sodir bo'lishi mumkin bo'lgan narsalar-possibility
+Egocentric-xudbin-self-involved
+Exonerate-aybsiz deb topmoq-to be found not guilty
+Incongruous-noo'rin noloyiq-contradictory
+Indigenous-mahalliy/ tub yerli-native
+Liability-majburiyat-a necessity
+Prolific-unumdor/ tez ko'payadigan-creating abundantly
+Reinstate-olib qo'ygan narsani qaytarib bermoq-to put back
+Superfluous-ortiqcha-unnecessary
+Unit_13
+Advocate-ma'qullamoq-to promote
+Antipathy-yoqtirmaslik-a strong dislike
+Emancipate-ozod qilmoq-to free
+Idiosyncrasy-o'ziga hos odat-a personal habit
+Imminent-muqarrar-likely to occur soon
+Impede-g'ov bo'lmoq-to hinder
+Inclusive-hammasini hisobga olgan holda-complete
+Jurisdiction-yurisdiktsiya/ qonuniy kuch-control
+Precarious-xatarli/ xavfli-unsafe
+Preposterous-be'mani/ o'rinsiz+ ridiculous
+Unit_14
+Austere-oddiy/ bezatilmagan-very plain
+Esoteric-tushunish qiyin-difficult to understand
+Facsimile-nusxa-an accurate copy
+Grotesque-g'alati/ yoqimsiz-strange-looking
+Mesmerize-fikru hayolini o'g'irlamoq-to fascinate
+Metamorphosis-rivojlanish natijasida boshqa ko'rinishga o'tish/ o'zgarish-a change  in form
+Notorious-salbiy jihati bilan yomon nom chiqargan-regarded negatively
+Perfunctory-yuzaki/ xo'ja ko'rsinga-uninterested
+Provocative-kishini g'ashiga tegadigan-attention-getting
+Travesty-a joking, disrespectful imitation
+Unit_15
+Connoisseur-mutaxassis-leader
+Conspiracy-til biriktirish-a plot
+Contrite-pushaymon-sorry
+Distraught-o'zini yo'qotgan/ pushaymon bo'lgan-anxious
+Germane-aloqador-related
+Lucid-aniq/ tushunarli-easy to understand
+Plight-og'ir ahvol-unfortunate situation ?
+Superficially-yuzaki ravishda-slightly
+Symmetrical-ikki tomoni bir biriga mos keladigan-balanced
+Verbose-ortiqcha so'zlari ko'p/ be'mani-wordy
+Unit_16
+Adept-bilimdon-skillful
+Encompass-o'z ichiga olmoq-to include
+Entrepreneur-a business investor
+Eradicate-ildizi bilan yo'q qilmoq-to erase
+Homogeneous-o'xshash-the same throughout
+Presumptuous-o'ziga bino qo'ygan-too forward
+Sordid-mudxish/ iflos-ugly
+Standardize-standartlashtirmoq-make consistent
+Stint-muddat/ begilangan ish yoki faoliyat buddati-an assigned job
+Stringent-qat'iy talab qilinadigan-demanding
+Unit_17
+Exhort-qattiq undamoq-to urge
+Flamboyant-yorqin-flashy
+Foible-nuqson-a minor failing
+Innocuous-xafa qilmaydigan/ dilga ozor bermaydigan-without bad effects
+Magnanimous-muruvatli/ hurmatli-big hearted
+Masochist-someone who enjoys being hurt
+Meticulous-sinchkov/ puxta-precise
+Rancor-achchiqlanish-deep hostility
+Recrimination-o'zaro janjal/ tortishuv-an accusation in reply
+Repugnant-yoqimsiz-disgusting
+Unit_19
+Chide-ayblamoq/ tanqid qilmoq-to criticize
+Coalition-koalitsiya( 2-3ta partiyani birlashishidan tashkil topgan guruh/ hukumat)-a partnership
+Commensurate-mos kelish/ mos ravishda-consistent with
+Connotation-ajralmas ma'no-a suggestion meaning
+Diabolic-juda yomon/yovuz-devilish
+Dilapidated-yarim xaroba-run-down
+Integral-muhim/ ajralmas-essential
+Noxious-zararli-unhealthy
+Scenario-ssenariy-an outline of possible events
+Yen-kuchli xohish-a longing
+Unit_20
+Atrophy-samarasiz bo'lib qolmoq-to waste away
+Deplore-qarshi chiqmoq-to condemn
+Deprivation-kerakli narsadan mahrum  qilish-a deficiency
+Exacerbate-yomonlashtirmoq( kasallik yoki muammoni)-to make worse
+Imperative-dolzarb-essential
+Mitigate-yengilashtirmoq-to relieve
+Objective-xolis/ adolatli-open-minded
+Penacea-hamma muammolarning yechimi-a universal remedy
+Unprecedented-misli ko'rilmagan-unheard-of
+Utilitarian-practical
+
