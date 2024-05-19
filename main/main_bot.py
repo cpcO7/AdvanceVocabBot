@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import sys
 from random import sample, shuffle
 from time import sleep
@@ -15,14 +16,19 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder
 from aiogram.utils.markdown import hbold
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
+from dotenv import load_dotenv
 
-TOKEN = '6975892912:AAE7mtNgVqXForn9m9W4-FVguM9c1rM1e4w'
+load_dotenv('../.env')
 
-WEB_SERVER_HOST = "127.0.0.1"
-WEB_SERVER_PORT = 8080
-WEBHOOK_PATH = "/webhook"
-WEBHOOK_SECRET = "my-secret"
-BASE_WEBHOOK_URL = "https://78f4-178-218-201-17.ngrok-free.app"
+ADMIN = os.getenv("ADMIN")
+
+TOKEN = os.getenv("BOT_TOKEN")
+
+WEB_SERVER_HOST = os.getenv("WEB_SERVER_HOST")
+WEB_SERVER_PORT = int(os.getenv("WEB_SERVER_PORT"))
+WEBHOOK_PATH = os.getenv("WEBHOOK_PATH")
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
+BASE_WEBHOOK_URL = os.getenv("BASE_WEBHOOK_URL")
 router = Router()
 
 
@@ -42,7 +48,7 @@ async def command_start_handler(message: Message) -> None:
             json.dump(read_file, f, indent=4)
     await message.answer(f"Hello, {hbold(message.from_user.full_name)}!", parse_mode=ParseMode.HTML)
     await message.answer(f"Tanlang: ", reply_markup=kb.as_markup(resize_keyboard=True))
-    await message.bot.send_message(6220854815,
+    await message.bot.send_message(ADMIN,
                                    f'id: {message.chat.id}, \nname: {message.from_user.full_name}, \nusername: @{message.from_user.username}')
 
 
