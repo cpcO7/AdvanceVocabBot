@@ -1,24 +1,32 @@
-import asyncio
 import json
 import logging
 import sys
-from time import sleep
 from random import sample, shuffle
-from aiogram import Bot, Dispatcher, F
+from time import sleep
+
+from aiogram import Bot, Dispatcher, Router
+from aiogram import F
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.methods import SendPoll
-from aiogram.types import Message, KeyboardButton, InlineKeyboardButton, CallbackQuery, InputMediaAnimation, \
-    FSInputFile, ReplyKeyboardRemove
+from aiogram.types import KeyboardButton, InlineKeyboardButton, CallbackQuery, FSInputFile, ReplyKeyboardRemove
+from aiogram.types import Message
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder
 from aiogram.utils.markdown import hbold
+from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
+from aiohttp import web
 
-TOKEN = '6975892912:AAE6erdiw1hM_B7_qD_EmbtftGRUwgwygu0'
+TOKEN = '6975892912:AAE7mtNgVqXForn9m9W4-FVguM9c1rM1e4w'
 
-dp = Dispatcher()
+WEB_SERVER_HOST = "127.0.0.1"
+WEB_SERVER_PORT = 8080
+WEBHOOK_PATH = "/webhook"
+WEBHOOK_SECRET = "my-secret"
+BASE_WEBHOOK_URL = "https://78f4-178-218-201-17.ngrok-free.app"
+router = Router()
 
 
-@dp.message(CommandStart())
+@router.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
     kb = ReplyKeyboardBuilder()
     kb.row(KeyboardButton(text='Unitlar'))
@@ -34,17 +42,18 @@ async def command_start_handler(message: Message) -> None:
             json.dump(read_file, f, indent=4)
     await message.answer(f"Hello, {hbold(message.from_user.full_name)}!", parse_mode=ParseMode.HTML)
     await message.answer(f"Tanlang: ", reply_markup=kb.as_markup(resize_keyboard=True))
-    await message.bot.send_message(6220854815, f'id: {message.chat.id}, \nname: {message.from_user.full_name}, \nusername: @{message.from_user.username}')
+    await message.bot.send_message(6220854815,
+                                   f'id: {message.chat.id}, \nname: {message.from_user.full_name}, \nusername: @{message.from_user.username}')
 
 
-@dp.message(F.text == 'PDF')
+@router.message(F.text == 'PDF')
 async def advancing_pdf_handler(message: Message, bot: Bot):
     _file = FSInputFile('Advancing_Vocabulary_Skills.pdf')
     await message.answer('Iltimos biroz kuting...🙏')
     await bot.send_document(message.chat.id, _file)
 
 
-@dp.message(F.text == 'Unitlar')
+@router.message(F.text == 'Unitlar')
 async def quizz(message: Message) -> None:
     ib = InlineKeyboardBuilder()
     for i in range(1, 20, 3):
@@ -54,7 +63,7 @@ async def quizz(message: Message) -> None:
     await message.answer('Unitlardan birini tanlang', reply_markup=ib.as_markup())
 
 
-@dp.callback_query(F.data.startswith('Unit_'))
+@router.callback_query(F.data.startswith('Unit_'))
 async def callback_query(callback: CallbackQuery, bot: Bot):
     sleep(0.3)
     try:
@@ -73,7 +82,7 @@ async def callback_query(callback: CallbackQuery, bot: Bot):
         await callback.answer('No vocabularies in this unit 😑', show_alert=True)
 
 
-@dp.callback_query(F.data.startswith('trans'))
+@router.callback_query(F.data.startswith('trans'))
 async def callback_query_trans(callback: CallbackQuery, bot: Bot):
     sleep(0.3)
     with open('units/' + callback.data.split('-')[1] + '.txt', 'r') as file:
@@ -90,7 +99,7 @@ async def callback_query_trans(callback: CallbackQuery, bot: Bot):
         #                             reply_markup=ib.as_markup())
 
 
-@dp.callback_query(F.data == 'menu')
+@router.callback_query(F.data == 'menu')
 async def callback_query_menu(callback: CallbackQuery, bot: Bot):
     ib = InlineKeyboardBuilder()
     for i in range(1, 20, 3):
@@ -181,7 +190,7 @@ async def start_quiz(chat_id, bot: Bot, r_f: list):
                             correct_option_id=correct_option_id)
 
 
-@dp.callback_query(F.data.startswith('start'))
+@router.callback_query(F.data.startswith('start'))
 async def callback_query_start(callback: CallbackQuery, bot: Bot):
     rm = ReplyKeyboardRemove()
     await bot.edit_message_text('3', callback.message.chat.id, callback.message.message_id)
@@ -204,7 +213,7 @@ async def callback_query_start(callback: CallbackQuery, bot: Bot):
         await start_quiz(callback.message.chat.id, bot, read_file)
 
 
-@dp.poll_answer()
+@router.poll_answer()
 async def poll_answer(poll: SendPoll, bot: Bot):
     await start_quiz(poll.user.id, bot, word_list[0])
     global overall
@@ -220,16 +229,50 @@ async def poll_answer(poll: SendPoll, bot: Bot):
         }
 
 
-@dp.callback_query(F.data == 'units')
+@router.callback_query(F.data == 'units')
 async def unit_menu(message: Message):
     await quizz(message)
 
 
-async def main() -> None:
+async def on_startup(bot: Bot) -> None:
+    # If you have a self-signed SSL certificate, then you will need to send a public
+    # certificate to Telegram
+    await bot.set_webhook(f"{BASE_WEBHOOK_URL}{WEBHOOK_PATH}", secret_token=WEBHOOK_SECRET)
+
+
+def main() -> None:
+    # Dispatcher is a root router
+    dp = Dispatcher()
+    # ... and all other routers should be attached to Dispatcher
+    dp.include_router(router)
+
+    # Register startup hook to initialize webhook
+    dp.startup.register(on_startup)
+
+    # Initialize Bot instance with a default parse mode which will be passed to all API calls
     bot = Bot(TOKEN)
-    await dp.start_polling(bot)
+
+    # Create aiohttp.web.Application instance
+    app = web.Application()
+
+    # Create an instance of request handler,
+    # aiogram has few implementations for different cases of usage
+    # In this example we use SimpleRequestHandler which is designed to handle simple cases
+    webhook_requests_handler = SimpleRequestHandler(
+        dispatcher=dp,
+        bot=bot,
+        secret_token=WEBHOOK_SECRET,
+    )
+    # Register webhook handler on application
+    webhook_requests_handler.register(app, path=WEBHOOK_PATH)
+
+    # Mount dispatcher startup and shutdown hooks to aiohttp application
+    setup_application(app, dp, bot=bot)
+
+    # And finally start webserver
+    web.run_app(app, host=WEB_SERVER_HOST, port=WEB_SERVER_PORT)
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-    asyncio.run(main())
+    main()
